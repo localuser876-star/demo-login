@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign in - My Account</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="login-card">
+
+            <!-- YOUR LOGO -->
+            <div class="logo">
+                <img src="google_logo.webp" alt="Your Logo">
+            </div>
+
+
+            <!-- TITLE -->
+            <h1>Sign in</h1>
+
+            <p class="subtitle">
+                Use your My Account
+            </p>
+
+
+            <!-- =========================
+                 EMAIL SECTION
+            ========================== -->
+
+            <div id="email-section">
+
+                <div class="input-container">
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder=" "
+                        autocomplete="off"
+                    >
+
+                    <label for="email">
+                        Email or phone
+                    </label>
+
+                </div>
+
+
+                <p id="email-error" class="error-message"></p>
+
+
+                <a
+                    href="#"
+                    class="link"
+                    onclick="showHelp(event)"
+                >
+                    Forgot email?
+                </a>
+
+
+                <p class="description">
+                    Not your computer? Use Guest mode to sign in privately.
+                </p>
+
+
+                <a
+    href="https://support.google.com/chrome/answer/6130773?hl=en"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+    Learn more
+</a>
+
+
+
+                <!-- BUTTONS -->
+
+                <div class="button-row">
+
+                    <button
+                        class="create-button"
+                        onclick="createAccount()"
+                    >
+                        Create account
+                    </button>
+
+
+                    <button
+                        class="next-button"
+                        onclick="goToPassword()"
+                    >
+                        Next
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 PASSWORD SECTION
+            ========================== -->
+
+            <div
+                id="password-section"
+                class="hidden"
+            >
+
+                <!-- ACCOUNT INFORMATION -->
+
+                <div class="selected-account">
+
+                    <span
+                        class="account-icon"
+                        id="account-initial"
+                    >
+                        A
+                    </span>
+
+                    <span id="selected-email"></span>
+
+                </div>
+
+
+                <!-- PASSWORD INPUT -->
+
+                <div class="input-container password-input">
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder=" "
+                        autocomplete="off"
+                    >
+
+                    <label for="password">
+                        Enter your password
+                    </label>
+
+                </div>
+
+
+                <p
+                    id="password-error"
+                    class="error-message"
+                ></p>
+
+
+                <!-- SHOW PASSWORD CHECKBOX -->
+
+                <div class="password-options">
+
+                    <label class="checkbox-container">
+
+                        <input
+                            type="checkbox"
+                            id="showPasswordCheckbox"
+                            onchange="togglePasswordCheckbox()"
+                        >
+
+                        <span>
+                            Show password
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <!-- PASSWORD BUTTONS -->
+
+                <div class="button-row password-buttons">
+
+                    <button
+                        class="back-button"
+                        onclick="goBack()"
+                    >
+                        Back
+                    </button>
+
+
+                    <button
+                        class="next-button"
+                        onclick="signIn()"
+                    >
+                        Sign in
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             FOOTER
+        ========================== -->
+
+        <div class="footer">
+
+            <div class="language">
+                English (United States)
+
+                <span>
+                    ▼
+                </span>
+            </div>
+
+
+            <div class="footer-links">
+
+                <a
+    href="https://support.google.com/accounts?hl=en&visit_id=639262082998696920-3835800406&rd=2&p=account_iph#topic=3382296"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+    Help
+</a>
+
+
+                <a
+        href="https://policies.google.com/privacy?gl=IN&hl=en&client_theme=dark"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Privacy
+    </a>
+
+                <a
+        href="https://policies.google.com/terms?gl=IN&hl=en&client_theme=dark"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Terms
+    </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

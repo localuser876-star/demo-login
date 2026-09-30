@@ -1,0 +1,490 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #202124;
+}
+
+.login-container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 100px;
+}
+
+
+/* =========================
+   LOGIN CARD
+========================= */
+
+.login-card {
+    width: 450px;
+    min-height: 500px;
+
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+
+    padding: 40px;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    width: 42px;
+    height: 42px;
+
+    margin: 0 auto 20px auto;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1 {
+    text-align: center;
+
+    font-size: 28px;
+    font-weight: 400;
+
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+
+    font-size: 16px;
+
+    color: #202124;
+
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.input-container {
+    position: relative;
+
+    width: 100%;
+
+    margin-bottom: 8px;
+}
+
+.input-container input {
+    width: 100%;
+    height: 56px;
+
+    padding: 16px;
+
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+
+    outline: none;
+
+    font-size: 16px;
+
+    color: #202124;
+
+    background-color: white;
+
+    transition: border 0.2s;
+}
+
+.input-container input:focus {
+    border: 2px solid #1a73e8;
+}
+
+
+/* =========================
+   FLOATING LABEL
+========================= */
+
+.input-container label {
+    position: absolute;
+
+    left: 14px;
+    top: 18px;
+
+    color: #5f6368;
+
+    font-size: 16px;
+
+    pointer-events: none;
+
+    background-color: white;
+
+    padding: 0 4px;
+
+    transition: 0.15s;
+}
+
+.input-container input:focus + label,
+.input-container input:not(:placeholder-shown) + label {
+    top: -8px;
+
+    font-size: 12px;
+
+    color: #1a73e8;
+}
+
+
+/* =========================
+   LINKS
+========================= */
+
+.link {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    color: #1a73e8;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   LEARN MORE
+========================= */
+
+.learn-more {
+    font-size: 11px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.learn-more:hover {
+    text-decoration: none;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.description {
+    margin-top: 35px;
+
+    color: #5f6368;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.button-row {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 40px;
+}
+
+button {
+    font-family: Arial, Helvetica, sans-serif;
+
+    cursor: pointer;
+}
+
+
+/* CREATE ACCOUNT */
+
+.create-button {
+    border: none;
+
+    background: transparent;
+
+    color: #1a73e8;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    padding: 10px 8px;
+
+    border-radius: 4px;
+}
+
+.create-button:hover {
+    background-color: #f1f6fe;
+}
+
+
+/* NEXT / SIGN IN */
+
+.next-button {
+    border: none;
+
+    background-color: #1a73e8;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    padding: 11px 24px;
+
+    border-radius: 4px;
+}
+
+.next-button:hover {
+    background-color: #1765cc;
+}
+
+
+/* =========================
+   ERROR MESSAGE
+========================= */
+
+.error-message {
+    color: #d93025;
+
+    font-size: 13px;
+
+    margin-top: 6px;
+
+    min-height: 16px;
+}
+
+
+/* =========================
+   PASSWORD SECTION
+========================= */
+
+.hidden {
+    display: none;
+}
+
+
+/* SELECTED ACCOUNT */
+
+.selected-account {
+    display: flex;
+
+    align-items: center;
+
+    width: fit-content;
+
+    margin: 0 auto 30px auto;
+
+    border: 1px solid #dadce0;
+
+    border-radius: 20px;
+
+    padding: 5px 12px 5px 5px;
+
+    font-size: 14px;
+}
+
+
+/* ACCOUNT INITIAL */
+
+.account-icon {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    background-color: #4285f4;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 8px;
+
+    font-weight: 400;
+}
+
+
+/* =========================
+   PASSWORD SPACING
+========================= */
+
+.password-input {
+    margin-bottom: 0;
+}
+
+.password-input + .error-message {
+    margin-top: 0;
+    min-height: 0;
+}
+
+.password-options {
+    margin-top: 7px;
+}
+
+.checkbox-container {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 14px;
+
+    color: #3c4043;
+
+    cursor: pointer;
+}
+
+.checkbox-container input {
+    width: 16px;
+    height: 16px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   PASSWORD BUTTONS
+========================= */
+
+.password-buttons {
+    margin-top: 30px;
+}
+
+
+/* BACK BUTTON */
+
+.back-button {
+    border: none;
+
+    background: transparent;
+
+    color: #1a73e8;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    padding: 10px 15px;
+
+    border-radius: 4px;
+}
+
+.back-button:hover {
+    background-color: #f1f6fe;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    width: 450px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 25px;
+
+    font-size: 12px;
+
+    color: #5f6368;
+}
+
+.language {
+    padding: 10px 8px;
+
+    cursor: pointer;
+}
+
+.language span {
+    margin-left: 5px;
+
+    font-size: 9px;
+}
+
+.footer-links {
+    display: flex;
+
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #5f6368;
+
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .login-container {
+        padding: 30px 20px;
+    }
+
+    .login-card {
+        width: 100%;
+
+        border: none;
+
+        padding: 20px 5px;
+    }
+
+    .footer {
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .footer-links {
+        gap: 15px;
+    }
+}

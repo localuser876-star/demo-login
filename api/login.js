@@ -29,6 +29,12 @@ export default async function handler(req, res) {
                 password
             });
 
+        // Record the email and result of the login attempt
+        await supabase.from("login_attempts").insert({
+            email: email,
+            status: error ? "failed" : "success"
+        });
+
         if (error) {
             return res.status(401).json({
                 error: "Invalid email or password"
